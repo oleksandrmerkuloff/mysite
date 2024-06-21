@@ -1,7 +1,8 @@
-/* #7D5A50
-#B4846C
-#E5B299
-#FCDEC0 */
+/* 
+#402E7A
+#4C3BCF
+#4B70F5
+#3DC2EC */
 * {
     padding: 0;
     margin: 0;
@@ -35,32 +36,52 @@ header {
 
 main {
     background-color: #FCDEC0;
+    padding-bottom: 50px;
 }
 
 #resume-container {
-    width: 60%;
+    width: 40%;
     margin: 0 auto;
     padding: 40px 0;
 }
 
-.section-header {
-    color: #7D5A50;
-    margin-bottom: 40px;
+#resume-header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-#project-header {
+#resume-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    float: left;
+    margin: 0 20px 20px;
 }
 
 #project-showcase {
+    padding: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+#project-header {
+    text-align: center;
 }
 
 .short-project-container {
-    margin: 20px 30px;
-    height: 150px;
-    width: 300px;
-    background-color: darkcyan;
+    background-color: rgb(102, 72, 102);
+    width: 400px;
+    height: 300px;
+}
+
+#stay-with-ukraine-promo {
+    width: 60%;
+    margin: 20px auto 0;
+}
+
+#stay-ukraine-header {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 footer {
