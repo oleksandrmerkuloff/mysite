@@ -13,7 +13,7 @@ class Post(models.Model):
     categories = models.ManyToManyRel(Category)
     post_text = models.TextField()
     image = models.ImageField(null=True, blank=True)
-    published_date = models.DateField()
+    published_date = models.DateField(auto_now_add=True)
 
 
 class Project(models.Model):
@@ -26,7 +26,7 @@ class Project(models.Model):
     name = models.CharField(max_length=150)
     logo = models.ImageField(null=True, default=True)
     description = models.TextField()
-    condition = None  # write right choices expression
+    condition = models.IntegerField(choices=project_statement)
     images = None  # Can I store several image like project example?
-    start_date = models.DateField()
+    start_date = models.DateField(auto_now_add=True)
     finish_date = models.DateField()
