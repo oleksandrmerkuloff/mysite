@@ -10,7 +10,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=150)
-    categories = models.ManyToManyRel(Category)
+    categories = models.ManyToManyField(Category)
     post_text = models.TextField()
     image = models.ImageField(null=True, blank=True)
     published_date = models.DateField(auto_now_add=True)
@@ -27,6 +27,11 @@ class Project(models.Model):
     logo = models.ImageField(null=True, default=True)
     description = models.TextField()
     condition = models.IntegerField(choices=project_statement)
-    images = None  # Can I store several image like project example?
     start_date = models.DateField(auto_now_add=True)
-    finish_date = models.DateField()
+
+
+class ProjectImages(models.Model):
+    project = models.ForeignKey(
+        Project, on_delete=models.CASCADE, related_name="images"
+    )
+    image = models.ImageField()
